@@ -1,10 +1,11 @@
 const userDetails = require('../model/model')
 const getalluser = async (req,res)=>{
+
     try {
         const user = await userDetails.find({});
-        res.status(200).json({user});
+        return  res.status(200).json({user});
     } catch (error) {
-        res.status(500).json({msg:error});
+       return res.status(500).json({msg:error});
     }
     
 }
